@@ -25,3 +25,23 @@
 }
 ```
 
+## Data
+### copy vs reference and owndership
+In Rust only data with no heap allocation have a copy mechanism.
+For example:
+- vector
+- deque
+etc with heap allocations, there are no copy mechanism.
+
+```
+let mut my_vec: Vec<u32> = = vec![1, 2, 3, 4, 5];
+let mut my_vec2 = my_vec; // my_vec is moved to my_vec2, ownership is moved to my_vec2
+```
+for example iteration over a map
+```
+use std::collections::HashMap;
+let mut my_map: HashMap<String, i32> = HashMap::new();
+my_map.insert("Daniel".to_string(), 95);
+
+for(key, value) in &my_map { // referenz to my_map, ownership is not changed or moved
+}

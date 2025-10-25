@@ -13,7 +13,7 @@ fn main() {
         let integer: i32 = 42;
         let float: f64 = 3.14;
         let boolean: bool = true;
-        println!("primitives: {integer} {float} {boolean}");
+        println!("primitives: {integer} {float} {boolean}"); // println!, ! is for macro calls
     }
     // tuple array
     {
