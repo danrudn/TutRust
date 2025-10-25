@@ -45,3 +45,23 @@ my_map.insert("Daniel".to_string(), 95);
 
 for(key, value) in &my_map { // referenz to my_map, ownership is not changed or moved
 }
+```
+
+### error managemnet
+in rust are no classic exceptions, only return values
+```
+fn divide(a: f64, b: f64) -> Result<f64, String> {
+    if b == 0.0 {
+        Err("Division durch Null".to_string())
+    } else {
+        Ok(a / b)
+    }
+}
+
+fn main() {
+    match divide(10.0, 0.0) {
+        Ok(result) => println!("Ergebnis: {}", result),
+        Err(e) => println!("Fehler: {}", e),
+    }
+}
+```

@@ -1,6 +1,6 @@
 {
   "rust-analyzer.linkedProjects": [
-    "./basics/control_structures/Cargo.toml"
+    "./basics/erros/Cargo.toml"
   ],
   
   // Automatische Formatierung
